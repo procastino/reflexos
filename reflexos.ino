@@ -6,7 +6,7 @@ int boton=6;
 
 //definimos as variables que necesitaremos para ter conta do tempo
 long tempoActual=0;
-long tempoAceso=1000;
+long tempoAceso=1200;
 
 //definimos unha variable que almacenara o numero aleatorio que fai que
 //se encenda un led determinado
@@ -95,9 +95,9 @@ void compara() {
        acertas();
       }
      }
-   //Se non cambiou de estado, gardo o estado en que estea como estado anterior e volto comezar
+   //Se non cambiou de estado, transformo o estado actual en estado anterior
    else {
-       botonAntes=digitalRead(boton);
+       botonAntes=botonAgora;
      }
   }
  
@@ -123,7 +123,7 @@ void perdiches(){
           //reinicio o nivel no que comezo
           nivel=0;
           //reinicio a variable de tempo de transicion do led
-          tempoAceso=1000;
+          tempoAceso=1200;
   }
 
 //Funcion en caso de acertar
